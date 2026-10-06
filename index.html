@@ -1,380 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-site-verification" content="r-aYreEr1T_XhqjFSR4VvrGB7YVt-gdo8U4BqocJKMU" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beryllium Security - AI-Powered Cybersecurity Solutions</title>
-    <meta
-      name="description"
-      content="Beryllium Security offers innovative AI-powered cybersecurity tools for advanced penetration testing, malware analysis, and offensive security. Explore our open-source Nebula, Nebula Pro, and DAP solutions."
-    />
-    <meta
-      name="keywords"
-      content="Cybersecurity, AI-Powered, Penetration Testing, Malware Analysis, Offensive Security, AI Cybersecurity, Beryllium Security, AI-Powered Penetration Testing, AI-Powered Malware Analysis, Automated Penetration Testing, Vulnerability Assessment, AI Threat Detection, Machine Learning Security, Cyber Threat Intelligence, Intrusion Detection, Security Automation, Behavioral Malware Analysis, AI Security Tools, AI-Driven Offensive Security"
-    />
-    <meta name="robots" content="index, follow" />
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://berylliumsec.github.io/berylliumsec" />
-    <!-- Open Graph / Facebook -->
-    <meta
-      property="og:title"
-      content="Beryllium Security - AI-Powered Cybersecurity Solutions"
-    />
-    <meta
-      property="og:description"
-      content="Discover innovative AI-powered tools from Beryllium Security – from our open-source Nebula to our advanced Nebula Pro and DAP for malware analysis."
-    />
-    <meta property="og:url" content="https://yourusername.github.io" />
+    <title>Beryllium Security | DAP and Nebula</title>
+    <meta name="description" content="Find Beryllium Security's current home for DAP malware and smart contract analysis, plus the separate open-source Nebula desktop project." />
+    <link rel="canonical" href="https://berylliumsec.com/" />
     <meta property="og:type" content="website" />
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Beryllium Security - AI-Powered Cybersecurity Solutions"
-    />
-    <meta
-      name="twitter:description"
-      content="Discover innovative AI-powered tools from Beryllium Security – from our open-source Nebula to our advanced Nebula Pro and DAP for malware analysis."
-    />
-
-    <!-- Favicon and Apple Touch Icon (using the logo) -->
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/logo.png" />
-    <link rel="apple-touch-icon" href="Images/logo.png" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Structured Data: Organization Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Beryllium Security",
-        "url": "https://berylliumsec.github.io/berylliumsec",
-        "logo": "Images/logo.png",
-        "sameAs": [
-          "https://github.com/berylliumsec",
-          "https://www.x.com/berylliumsec_"
-        ]
-      }
-    </script>
-    <!-- Inline CSS -->
+    <meta property="og:title" content="Beryllium Security | DAP and Nebula" />
+    <meta property="og:description" content="Explore Beryllium DAP and the separate open-source Nebula project. Visit the current Beryllium site for product information." />
+    <meta property="og:url" content="https://berylliumsec.com/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/png" href="Images/logo.png" />
     <style>
-      /* Reset & Box Sizing */
-      *, *::before, *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #0d0d0d;
-        color: #dcdcdc;
-        line-height: 1.6;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      /* Header & Navigation */
-      header {
-        background-color: #101010;
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-      .logo img {
-        height: 50px;
-      }
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 2rem;
-      }
-      nav a {
-        color: #dcdcdc;
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-      nav a:hover,
-      nav a:focus {
-        color: #00aaff;
-      }
-      /* Hero Section */
-      .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 4rem 2rem;
-        background: linear-gradient(135deg, #101010, #0d0d0d);
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-      .hero p {
-        font-size: 1.125rem;
-        max-width: 600px;
-        margin-bottom: 2rem;
-      }
-      .button {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        background-color: #00aaff;
-        color: #ffffff;
-        font-weight: bold;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-      }
-      .button:hover,
-      .button:focus {
-        background-color: #0088cc;
-      }
-      /* Main Content */
-      main {
-        padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      section {
-        margin-bottom: 3rem;
-      }
-      section h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        border-bottom: 2px solid #00aaff;
-        display: inline-block;
-        padding-bottom: 0.3rem;
-      }
-      .product {
-        background-color: #101010;
-        padding: 1.5rem;
-        border-radius: 8px;
-        margin-bottom: 2rem;
-      }
-      .product h3 {
-        color: #00aaff;
-        margin-bottom: 1rem;
-      }
-      ul {
-        padding-left: 1.5rem;
-      }
-      ul li {
-        margin-bottom: 0.5rem;
-      }
-      /* Footer */
-      footer {
-        background-color: #101010;
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-      }
-      footer a {
-        color: #00aaff;
-      }
-      footer a:hover,
-      footer a:focus {
-        text-decoration: underline;
-      }
-      /* Responsive Typography */
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2rem;
-        }
-        nav ul {
-          flex-direction: column;
-          gap: 1rem;
-        }
-      }
+      :root { color-scheme: dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #0d121b; color: #e8edf4; line-height: 1.6; }
+      a { color: #7dd7ff; }
+      a:focus-visible { outline: 3px solid #7dd7ff; outline-offset: 4px; }
+      .wrap { width: min(100% - 2rem, 960px); margin-inline: auto; }
+      header { border-bottom: 1px solid #344150; }
+      header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .85rem; }
+      .brand { display: inline-flex; align-items: center; gap: .75rem; color: #fff; font-weight: 700; text-decoration: none; }
+      .brand img { width: 40px; height: 40px; border-radius: 50%; }
+      nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+      main { padding-block: 4rem; }
+      h1, h2 { line-height: 1.2; }
+      h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); max-width: 17ch; margin: 0 0 1rem; }
+      h2 { font-size: 1.45rem; margin-top: 0; }
+      .intro { max-width: 70ch; font-size: 1.15rem; color: #c7d3df; }
+      .actions { display: flex; flex-wrap: wrap; gap: .85rem; margin: 1.8rem 0 3.5rem; }
+      .button { display: inline-block; padding: .7rem 1rem; border-radius: .35rem; background: #67ccfa; color: #06131e; font-weight: 700; text-decoration: none; }
+      .button:hover { background: #a5e4ff; }
+      .button.secondary { background: transparent; border: 1px solid #7dd7ff; color: #7dd7ff; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1rem; }
+      .card { padding: 1.5rem; background: #172231; border: 1px solid #344150; border-radius: .65rem; }
+      .card p { margin-bottom: 1.1rem; color: #c7d3df; }
+      .card a { font-weight: 650; }
+      .note { margin-top: 2rem; color: #b7c7d5; }
+      footer { border-top: 1px solid #344150; padding-block: 1.5rem; color: #b7c7d5; }
     </style>
   </head>
   <body>
-    <!-- Header -->
     <header>
-      <div class="logo">
-        <a href="#overview">
-          <img src="Images/logo.png" alt="Beryllium Security Logo" />
-        </a>
+      <div class="wrap">
+        <a class="brand" href="https://berylliumsec.com/"><img src="Images/logo.png" alt="" />Beryllium Security</a>
+        <nav aria-label="Site links">
+          <a href="https://berylliumsec.com/">Current site</a>
+          <a href="https://github.com/berylliumsec/nebula">Nebula</a>
+        </nav>
       </div>
-      <nav aria-label="Main Navigation">
-        <ul>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#nebula">Nebula</a></li>
-          <li><a href="#nebula-pro">Nebula Pro</a></li>
-          <li><a href="#dap">DAP</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
     </header>
-
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <h1 id="hero-heading">Empowering Cybersecurity Professionals</h1>
-      <p>
-        Explore innovative, AI-powered tools designed for offensive security,
-        advanced penetration testing, and malware analysis.
-      </p>
-      <a class="button" href="#overview">Learn More</a>
-    </section>
-
-    <!-- Main Content -->
-    <main role="main">
-      <!-- Overview Section -->
-      <section id="overview">
-        <h2>AI-Powered Cybersecurity Solutions</h2>
-        <p>
-          Beryllium Security offers cutting-edge tools that revolutionize how
-          cybersecurity professionals approach offensive security. Our
-          solutions—including the open-source Nebula and advanced Nebula Pro—streamline vulnerability assessments while prioritizing data privacy.
-        </p>
-      </section>
-
-      <!-- Nebula Section -->
-      <section id="nebula">
-        <h2>Nebula – Open-Source Penetration Testing Assistant</h2>
-        <div class="product">
-          <h3>Key Features</h3>
-          <ul>
-            <li>
-              <strong>Free &amp; Open-Source:</strong> BSD-2-Clause licensed for both individuals and organizations.
-            </li>
-            <li>
-              <strong>Natural Language Interface:</strong> Execute commands using everyday language.
-            </li>
-            <li>
-              <strong>Terminal-Embedded AI:</strong> Seamlessly integrated within your CLI for efficient operations.
-            </li>
-            <li>
-              <strong>Real-Time Insights:</strong> Provides context-aware recommendations as you work.
-            </li>
-            <li>
-              <strong>Autonomous Mode (Preview):</strong> Chains multiple tools for automated tasks.
-            </li>
-            <li>
-              <strong>Local AI Processing:</strong> Keeps your data private by leveraging local models (e.g., Meta's Llama, Mistral).
-            </li>
-            <li>
-              <strong>GitHub Repository:</strong>
-              <a href="https://github.com/berylliumsec/nebula" target="_blank" rel="noopener">View on GitHub</a>
-            </li>
-          </ul>
-          <p><em>Current version: Nebula 2.0.0b4 (Feb 4, 2025)</em></p>
+    <main class="wrap">
+      <h1>Beryllium's current work</h1>
+      <p class="intro">This is an older project site. For current information about Beryllium DAP, visit the <a href="https://berylliumsec.com/">company site</a>. Nebula is a separate open-source desktop project with its own repository and release guidance.</p>
+      <div class="actions">
+        <a class="button" href="https://berylliumsec.com/">Visit Beryllium</a>
+        <a class="button secondary" href="https://github.com/berylliumsec/nebula">Explore Nebula</a>
+      </div>
+      <section aria-labelledby="products-heading">
+        <h2 id="products-heading">Explore the projects</h2>
+        <div class="cards">
+          <article class="card">
+            <h2>DAP: malware analysis</h2>
+            <p>Beryllium's commercial analysis platform helps analysts investigate supported PE, ELF, and .NET binaries. Findings and evidence require analyst review.</p>
+            <a href="https://berylliumsec.com/malware-analysis">See malware analysis</a>
+          </article>
+          <article class="card">
+            <h2>DAP: smart contract analysis</h2>
+            <p>A separate DAP track supports smart contract security review. See the current product page for its scope and examples.</p>
+            <a href="https://berylliumsec.com/smart-contract-analysis">See smart contract analysis</a>
+          </article>
+          <article class="card">
+            <h2>Nebula: open-source desktop</h2>
+            <p>Nebula 3 is a Linux desktop preview for authorized security engagements. It uses a prerelease channel; consult the repository for current builds, requirements, and Nebula 2 migration guidance.</p>
+            <a href="https://github.com/berylliumsec/nebula">View Nebula on GitHub</a>
+          </article>
         </div>
       </section>
-
-      <!-- Nebula Pro Section -->
-      <section id="nebula-pro">
-        <h2>Nebula Pro – Advanced PenTestOps Platform</h2>
-        <div class="product">
-          <h3>Features</h3>
-          <ul>
-            <li>
-              <strong>All-in-One Platform:</strong> Integrates every phase of penetration testing from reconnaissance to reporting.
-            </li>
-            <li>
-              <strong>Folder-Level Engagements:</strong> Automatically organizes data for a streamlined workflow.
-            </li>
-            <li>
-              <strong>AI-Powered Assistants:</strong>
-              <ul>
-                <li><em>Terminal Assistant:</em> Generate and analyze scripts right in your CLI.</li>
-                <li><em>Suggestion Assistant:</em> Recommends next steps based on real-time outputs.</li>
-                <li><em>Note Assistant:</em> Summarizes findings and prepares report notes.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Autonomous Mode:</strong> Automatically charts attack paths with your oversight.
-            </li>
-            <li>
-              <strong>Collaboration &amp; Multitasking:</strong> Supports parallel engagements with comprehensive audit trails.
-            </li>
-            <li>
-              <strong>Integrated Tools:</strong>
-              <ul>
-                <li>Screenshot &amp; Image Editor for capturing and annotating outputs.</li>
-                <li>Privacy Controls such as Incognito Mode and PII masking.</li>
-              </ul>
-            </li>
-          </ul>
-          <p>
-            Interested organizations can 
-            <a href="https://www.berylliumsec.com/nebula-pro-waitlist" target="_blank" rel="noopener">request a trial</a>
-            or view our 
-            <a href="https://www.berylliumsec.com/nebula-pro-pricing" target="_blank" rel="noopener">pricing details</a>.
-          </p>
-        </div>
-      </section>
-
-      <!-- DAP Section -->
-      <section id="dap">
-        <h2>DAP – Deep Application Profiler for Malware Analysis</h2>
-        <div class="product">
-          <h3>Features</h3>
-          <ul>
-            <li>
-              <strong>AI-Driven Analysis:</strong> Reverse-engineers executables to detect malicious behavior.
-            </li>
-            <li>
-              <strong>Dual Offerings:</strong> Web interface for analysts and API for enterprise integration.
-            </li>
-            <li>
-              <strong>Novel Threat Detection:</strong> Identifies zero-day or custom malware beyond traditional signatures.
-            </li>
-            <li>
-              <strong>Focused Analysis:</strong> Supports executables up to ~0.5 MB with emphasis on unmanaged code.
-            </li>
-            <li>
-              Learn more via our
-              <a href="https://www.berylliumsec.com/dap-overview" target="_blank" rel="noopener">Introducing DAP</a>
-              post.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Blog Section -->
-      <section id="blog">
-        <h2>Beryllium Security Blog</h2>
-        <p>
-          Stay updated with insights on cybersecurity, AI innovations, and offensive security trends.
-          Read detailed analyses and thought leadership articles on our blog.
-        </p>
-        <a class="button" href="https://www.berylliumsec.com/blog" target="_blank" rel="noopener">Visit Blog</a>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p>
-          Have questions or want to collaborate? Reach out via our 
-          <a href="https://www.berylliumsec.com/contact" target="_blank" rel="noopener">Contact page</a>
-          for demos, inquiries, or support.
-        </p>
-      </section>
+      <p class="note">For recent writing and research, visit the <a href="https://berylliumsec.com/blog">Beryllium blog</a> or the <a href="https://berylliumsec.com/research">research page</a>.</p>
     </main>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2020-2025 DIGE LLC. All rights reserved.</p>
-      <p>
-        Follow us:
-        <a href="https://github.com/berylliumsec" target="_blank" rel="noopener">GitHub</a> |
-        <a href="https://www.x.com/berylliumsec_" target="_blank" rel="noopener">X (Twitter)</a>
-      </p>
-    </footer>
+    <footer><div class="wrap">Beryllium Security · <a href="https://berylliumsec.com/">berylliumsec.com</a></div></footer>
   </body>
 </html>
